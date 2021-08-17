@@ -1,0 +1,65 @@
+body {
+    margin: 0px;
+    font-weight: bold;
+    background: linear-gradient(to right, #000428, #004e92);
+    color: white;
+}
+
+.header{
+    display: flex;
+    flex-direction: column;
+    align-items: center; 
+}
+
+.main{
+    display: flex;
+    padding: 0px 30px;
+    justify-content: center;
+    margin-top:75px;
+
+}
+
+.main__container{
+    display: flex;
+    padding: 3px 30px 30px;
+    flex-direction: column;
+    border: 2px solid white;
+    border-radius: 40px;
+    min-height: 389px;
+    width: 300px;
+    justify-content: space-around;
+    margin-left: 10px;
+    margin-top: 22px;
+    
+}
+
+.main__container--descuento{
+    display: flex;
+    flex-direction: column;
+}
+
+.input {
+    height: 35px;
+    border-radius: 11px;  
+    margin-top: 8px;
+    text-align: center;
+  }
+
+  .button {
+    
+    border: none;
+    border-radius: 11px;
+    background: linear-gradient(to right, #000428, #004e92);
+    color:white;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: bold;
+    height: 38px;
+    letter-spacing: 1px;
+    margin: 22px 0px;
+    
+  }  
+
+  p {
+      text-align: center;
+  }
