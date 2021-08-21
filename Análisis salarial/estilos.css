@@ -1,10 +1,10 @@
-
 body {
     margin: 0px;
-    background: linear-gradient(to right, #000000, #0f9b0f);
+    background: linear-gradient(to right, #ff0084, #33001b); 
     color:white;
     font-weight: bold;
 }
+
 
 .header{
     display: flex;
@@ -14,10 +14,11 @@ body {
 }
 
 .main{
+    align-items: center;
     display: flex;
-    justify-content: center;
     padding: 0px 30px;
     margin-top:75px;
+    flex-direction: column;
 }
 
 .main__container{
@@ -32,31 +33,24 @@ body {
     margin-left: 10px;
     margin-top: 22px;
 }
-
 .main__container--datos{
     display: flex;
     flex-direction: column;
 }
-
 .input {
+    border: none;
     height: 35px;
+    color:  #ff0084;
     border-radius: 11px; 
-    background: linear-gradient(to right, #000000, #0f9b0f); 
     margin-top: 8px;
     text-align: center;
   }
-
- #InputResultadoMediaArmonica{
-    font-size: 20px;
-    color:white;
- }
 
   .button {
     
     border: none;
     border-radius: 11px;
-    background: linear-gradient(to right, #000000, #0f9b0f);
-    color:white;
+    color:  #ff0084;
     cursor: pointer;
     font-size: 16px;
     font-weight: bold;
@@ -64,14 +58,26 @@ body {
     letter-spacing: 1px;
     margin: 22px 0px;
     
-  } 
-    
+  }   
 
+  .button:hover {
+    background: linear-gradient(to right, #ff0084, #33001b);
+    color:white;
+  }
 
   h1{
-      text-align: center;
-  }
+    text-align: center;
+}
 
-  p{
-      text-align: center;
-  }
+p{
+    text-align: center;
+}
+
+#respuestas{
+    text-align: center;
+    margin-top: 70px;
+    font-size: 20px;
+    text-decoration: underline;
+
+}
+
