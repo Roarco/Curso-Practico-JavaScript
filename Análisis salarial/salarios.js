@@ -13,6 +13,7 @@ let paisSel;
 let mitad;
 let mediana;
 
+
 // Funcion para agregar los de los inputs a las variables
 
 function agregarDatos () {

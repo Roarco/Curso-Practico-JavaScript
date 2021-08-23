@@ -23,11 +23,14 @@
         const elemento2 = salaryColOrder[mitad -1];
 
         mediana = (elemento1 + elemento2) / 2; 
+        medianaGeneralCol = mediana;
+        
 
         document.getElementById("respuestas").innerHTML ="La mediana general de salarios del pais : "  + paisSel + " " + "es : " + mediana;
 
      } else if (paisSel === "Colombia" && salaryColOrder.length % 2 !== 0) { 
         document.getElementById("respuestas").innerHTML ="La mediana de salarios del pais : "  + paisSel + " " + "es : " + salaryColOrder[mitad];
+        medianaGeneralCol = salaryColOrder[mitad];
 
 
     } else if (paisSel === "Mexico" && salaryMexOrder.length % 2 === 0){
@@ -36,6 +39,7 @@
         const elemento2 = salaryMexOrder[mitad -1];
 
         mediana = (elemento1 + elemento2) / 2; 
+        medianaGeneralMex = mediana; 
 
         document.getElementById("respuestas").innerHTML ="La mediana de salarios del pais : "  + paisSel + " " + "es : " + mediana;
 
@@ -43,6 +47,7 @@
      }else if(paisSel === "Mexico" && salaryMexOrder.length % 2 !== 0){
 
         document.getElementById("respuestas").innerHTML ="La mediana de salarios del pais : "  + paisSel + " " + "es : " + salaryMexOrder[mitad];
+        medianaGeneralMex = salaryMexOrder[mitad];
 
     }   else if (paisSel === "Brasil" && salaryBraOrder.length % 2 === 0){
 
@@ -50,6 +55,7 @@
         const elemento2 = salaryBraOrder[mitad -1];
 
         mediana = (elemento1 + elemento2) / 2; 
+        medianaGeneralBra = mediana;
 
         document.getElementById("respuestas").innerHTML ="La mediana de salarios del pais : "  + paisSel + " " + "es : " + mediana;
 
@@ -57,6 +63,7 @@
      }else if (paisSel === "Brasil" && salaryBraOrder.length % 2 !== 0){
 
         document.getElementById("respuestas").innerHTML ="La mediana de salarios del pais : "  + paisSel + " " + "es : " + salaryBraOrder[mitad];
+        medianaGeneralBra = salaryBraOrder[mitad];
     }         
 
 } 
@@ -173,6 +180,27 @@ function calcularMedianaTop10(){
 
  }
 
+
+}
+
+let medianaGeneralCol;
+let medianaGeneralMex ;
+let medianaGeneralBra;
+
+function calcularDiffSal (){
+
+  
+   let diffSalColMex =  parseInt(medianaGeneralCol - (medianaGeneralMex * 189.81));
+
+   let diffSalColBra =  parseInt(medianaGeneralCol - (medianaGeneralBra * 718.61));
+
+   let diffSalMexBra =  parseInt(medianaGeneralMex - (medianaGeneralBra * 3.79));
+
+   document.getElementById("respuestas").innerHTML ="La diferencia salarial Colombia-Mexico es de : " + diffSalColMex + " pesos colombianos";
+
+   document.getElementById("respuestas2").innerHTML ="La diferencia salarial Colombia-Brasil es de : " + diffSalColBra + " pesos colombianos";
+
+   document.getElementById("respuestas3").innerHTML ="La diferencia salarial Mexico-Brasil es de : " + diffSalMexBra + " pesos mexicanos";
 
 }
 
